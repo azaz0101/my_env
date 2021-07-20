@@ -35,6 +35,9 @@ RUN dpkg --add-architecture i386 && \
 # set tmux config
 RUN cd /root && wget https://raw.githubusercontent.com/kia280/MyEnv/master/tmux/.tmux.conf
 
+# set vimrc
+COPY ./.vimrc /root/.vimrc
+
 WORKDIR /root
 
 CMD ["/bin/bash"]
